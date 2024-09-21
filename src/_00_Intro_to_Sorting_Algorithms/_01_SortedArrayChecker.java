@@ -9,10 +9,41 @@ public class _01_SortedArrayChecker {
      * and false otherwise.
      */
     public static boolean intArraySorted(int[] arr) {
-        
-        return false;
+    	Boolean sorted = true;
+    	
+   	 for (int i = 0; i < arr.length; i++) {
+
+            for (int k = 0; k < arr.length - 1; k++) {
+                
+              
+                if( arr[k] > arr[ k+1 ] ) {
+               	 sorted = false;
+                }
+            }
+   	 }
+   	
+		return sorted;
     }
 
+    
+    static Boolean doubleArraySorted(double[] arr) {
+    	Boolean sorted = true;
+    	
+    	 for (int i = 0; i < arr.length; i++) {
+
+             for (int k = 0; k < arr.length - 1; k++) {
+                 
+               
+                 if( arr[k] > arr[ k+1 ] ) {
+                	 sorted = false;
+                 }
+             }
+    	 }
+    	
+		return sorted;
+    	
+    	
+    }
     /*
      * 2. Write a static method called doubleArraySorted.
      *
@@ -20,7 +51,42 @@ public class _01_SortedArrayChecker {
      * The method returns true if the double array is in ascending order
      * and false otherwise.
      */
-
+    static Boolean stringArraySorted(String[] arr) {
+    	Boolean sorted = true;
+    	
+    	 for (int i = 0; i < arr.length; i++) {
+             for (int k = 0; k < arr.length - 1; k++) {
+                 
+ 
+                 if( arr[k].compareTo(arr[ k+1 ]) > 0 ) {
+                 sorted = false;
+                 }
+             }
+         }
+    	
+		return sorted;
+    	
+    	
+    }
+    
+    static Boolean charArraySorted(char[] arr) {
+    	Boolean sorted = true;
+    	
+    	
+    	 for (int i = 0; i < arr.length; i++) {
+             for (int k = 0; k < arr.length - 1; k++) {
+                 
+ 
+                 if( arr[k] > arr[ k+1 ] ) {
+                 sorted = false;
+                 }
+             }
+         }
+    	
+		return sorted;
+    	
+    	
+    }
 
     /*
      * 3. Write a static method called charArraySorted.
@@ -39,5 +105,5 @@ public class _01_SortedArrayChecker {
      *  The method returns true if the String array is in alphabetical
      *  order and false otherwise (Use the compareTo(String) method).
      */
-
+    
 }
