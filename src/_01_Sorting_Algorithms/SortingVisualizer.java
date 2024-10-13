@@ -16,7 +16,7 @@ public class SortingVisualizer extends JLabel{
     private static final int HEIGHT = 500;
 
     private static final int ARRAY_SIZE = 250;
-    private static final int MAX = 500;
+    private static final int MAX = 250;
 
     private int cellWidth;
 
