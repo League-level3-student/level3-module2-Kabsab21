@@ -46,5 +46,28 @@ public class ThanosSorter extends Sorter {
     @Override
     void sort(int[] arr, SortingVisualizer display) {
         
+    	for( int i : arr) {
+    		
+    		if( i <= 248) {
+    		
+    		
+    		if ( arr[i] > arr[i+1] ){
+    	
+    	//	System.out.println(arr[i]);
+    			System.out.println("REMOVERAAAH");
+    			
+    			arr[i] = 0;
+    		//	System.out.println(arr[i]);
+    			
+   
+    			}
+    		
+    		System.out.println(arr[i]);
+    	}
+    	}
+    	
+    	
     }
+    
+    
 }

@@ -4,6 +4,8 @@ import java.lang.reflect.Array;
 import java.util.Random;
 
 public class BubbleSorter extends Sorter{
+	boolean movedItems = false;
+	boolean isSorted = false;
     public BubbleSorter() {
         type = "Bubble";
     }
@@ -17,23 +19,28 @@ public class BubbleSorter extends Sorter{
     void sort(int[] array, SortingVisualizer display) {
     	System.out.println("RUN ");
     	
-    	boolean isSorted 
-    	arsort(array);
-      
+    
+    	while(isSorted==false) {
+    		
+    
+    		arsort(array);
+    		
+    		
+    	}
+
  }
 
     
 
 	int[] arsort( int[] array ) {
-    	
+    	int counter = 0;
 	for( int i : array) {
 		
-		if( array[i] <= array[i+1]) {
-			System.out.println(array[i]);
-			System.out.println("fine");
+		if( i <= 248) {
 		
-			
-	} else if ( array[i] > array[i+1] ){
+		
+		if ( array[i] > array[i+1] ){
+	
 		System.out.println(array[i]);
 			System.out.println("swap");
 			int ra = array[i];
@@ -41,12 +48,19 @@ public class BubbleSorter extends Sorter{
 			array[i+1] = ra;
 			array[i] = ar;
 			System.out.println(array[i]);
+			movedItems = true;
+			counter++;
 			}
-		}
+		
+		
+	}
+	}
+
+	if( counter == 248 && movedItems == false ) {
+		System.out.println("AHHHHHHHHHHHHHHHHHHHHHHH");
+		isSorted = true;
+	}
 	
-		for( int i : array ) {
-    		System.out.println(array[i]);
-    	}
 		return array;
 	}
 	
