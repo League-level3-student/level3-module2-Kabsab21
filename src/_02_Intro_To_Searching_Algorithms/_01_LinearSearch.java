@@ -6,12 +6,25 @@ public class _01_LinearSearch {
      * there are many algorithms that can do so. The simplest is the 
      * linear search. This is best for short unsorted lists of data.
      */
-    public static int linearSearch(String[] words, String value) {
+    public static int linearSearch(int[] words, int value) {
         // 1. Complete the method using a for loop to find the value
         //    in the array. Return the location in the array
         //    where the value was found.
         //    If the value is not found in the array, return -1.
+    	
+    	int finalIndex = -1;
+    	for(int n : words) {
+    		System.out.println(n);
+    	}
+    	for( int i = 0; i < words.length; i++ ) {
+    		
+            if( words[i] == value ) {
+                 finalIndex = i;
+                break;
+            }
+        }
+    	System.out.println(finalIndex);
 
-        return 0;
+        return finalIndex;
     }
 }
