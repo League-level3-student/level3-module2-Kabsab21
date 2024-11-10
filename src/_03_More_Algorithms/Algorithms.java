@@ -73,4 +73,72 @@ public class Algorithms {
 		
 		return false;
 	}
+
+	public static Object countPearls(List<Boolean> oysters) {
+		// TODO Auto-generated method stub
+		int containsPearls = 0;
+		for( Boolean i : oysters ) {
+			if( i == true ) {
+				containsPearls = containsPearls+1;
+			}
+		}
+		return containsPearls;
+	}
+
+	public static double findTallest(List<Double> peeps) {
+		// TODO Auto-generated method stub
+		Double tallest = 0.0;
+		for( int i = 0; i < peeps.size(); i++ ) {
+			if( i > 0) {
+				if( peeps.get(i) > tallest) {
+					tallest = peeps.get(i);
+				}
+			}
+		}
+		return tallest;
+	}
+
+	public static Object findLongestWord(List<String> words) {
+		// TODO Auto-generated method stub
+		String longest = "";
+		for( int i = 0; i < words.size(); i++ ) {
+			if( i > 0) {
+				if( words.get(i).length() > longest.length()) {
+					longest = words.get(i);
+				}
+			}
+		}
+		return longest;
+	}
+
+	public static Object containsSOS(List<String> message1) {
+		// TODO Auto-generated method stub
+		
+		for( int i = 0; i < message1.size(); i++ ) {
+			if( i > 0) {
+				if(  message1.get(i).contains("... --- ...")) {
+					return true;
+				
+				}
+			}
+		}
+		return false;
+	}
+
+	public static List<Double> sortScores(List<Double> results) {
+		// TODO Auto-generated method stub
+		boolean issorted = false;
+		while(issorted == false ){
+		for(int i = 0; i < ((CharSequence) results).length(); i++){
+			if(results.get(i) > results.get(i+1)) {
+				Double n = results.get(i);
+				 results.set( i, results.get(i+1));
+				 results.set( i+1, n);
+
+			}
+		}
+		}
+		
+		return results;
+	}
 }
