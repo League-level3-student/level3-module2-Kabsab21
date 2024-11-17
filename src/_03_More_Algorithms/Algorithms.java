@@ -127,14 +127,19 @@ public class Algorithms {
 
 	public static List<Double> sortScores(List<Double> results) {
 		// TODO Auto-generated method stub
+		boolean swap = false;
 		boolean issorted = false;
 		while(issorted == false ){
 		for(int i = 0; i < ((CharSequence) results).length(); i++){
+			
 			if(results.get(i) > results.get(i+1)) {
 				Double n = results.get(i);
 				 results.set( i, results.get(i+1));
 				 results.set( i+1, n);
-
+				 swap = true;
+			}
+			if(swap == false) {
+				return results;
 			}
 		}
 		}
