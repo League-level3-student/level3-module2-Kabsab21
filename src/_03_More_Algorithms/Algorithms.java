@@ -127,22 +127,37 @@ public class Algorithms {
 
 	public static List<Double> sortScores(List<Double> results) {
 		// TODO Auto-generated method stub
-		boolean swap = false;
+		boolean noswap = true;
 		boolean issorted = false;
+		
 		while(issorted == false ){
-		for(int i = 0; i < ((CharSequence) results).length(); i++){
+			 System.out.println("RUNNING??");
+		int count = 0;	 
+		for(int i = 0; i <  results.size(); i++){
 			
+			 System.out.println("before"+results.get(i)+"size"+results.size());
+			 count++;
+		
+			 
 			if(results.get(i) > results.get(i+1)) {
 				Double n = results.get(i);
 				 results.set( i, results.get(i+1));
 				 results.set( i+1, n);
-				 swap = true;
+				 noswap = false;
+				 System.out.println("swap");
+				
+				 
+				}
 			}
-			if(swap == false) {
-				return results;
-			}
+		if(count == results.size()-2 && noswap == true) {
+			issorted = true;
+			 System.out.println("sorted");
 		}
-		}
+		
+	}
+		
+	
+		
 		
 		return results;
 	}

@@ -69,7 +69,7 @@ public class _01_SearchingAndSortingAlgorithmsTest {
     // 6. Write a Morse code translator to read the messages. Just kidding!
 
     // 7. Sort the exam results from lowest to highest.
-//    @Test
+    @Test
     public void testSort() throws Exception {
         List<Double> results = Arrays.asList(
                 new Double[] { 60.3, 60.2, 80.4, 67.2, 95.0, 85.5, 40.7, 68.2, 38.4, 94.2, 85.0, 84.5, 50.1, 66.6 });
